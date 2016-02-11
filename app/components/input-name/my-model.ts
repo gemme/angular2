@@ -8,6 +8,6 @@ export class MyModel{
     }
     
     toggle():void{
-        this.status = (this.status === 'started')?'completed': 'start';
+        this.status = (this.status === 'started')?'completed': 'started';
     }
 }
