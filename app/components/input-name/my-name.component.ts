@@ -6,7 +6,7 @@ import {MyModel} from './my-model';
 @Component({
     selector: 'my-app',
     directives: [MyListComponent],
-    template: `<form >
+    template: `<form (submit)="onSubmit()">
                     <input type="text" [(ngModel)]="myModel.title" >
                     <my-list></my-list>
                </form>`
@@ -18,7 +18,7 @@ export class MyNameComponent {
     constructor(public myListService: MyListService){ }
     
     onSubmit(){
-        this.myListService.myList.push(this.myModel.getModel());
+        this.myListService.addList(this.myModel.getModel());
         this.myModel = new MyModel();
     }
 }
