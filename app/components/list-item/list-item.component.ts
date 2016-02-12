@@ -1,5 +1,6 @@
-import {Component,Input} from 'angular2/core';
+import {Component,Input,ViewEncapsulation} from 'angular2/core';
 @Component({
+    encapsulation:ViewEncapsulation.None,
     selector: 'list-item',
     template: `
     <style>

@@ -13,6 +13,14 @@
         <script src="node_modules/rxjs/bundles/Rx.js"></script>
         <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
         <script src="app/my-name.service.ts"></script>
+        <style>
+            .completed{
+                background-color: red;
+            }
+            .started{
+                background-color: yellow;
+            }
+        </style>
     </head>
     <script>
         System.config({
@@ -27,6 +35,8 @@
               .then(null, console.error.bind(console));
     </script>
     <body>
+        <div class="completed">Completed</div>
+        <div class="started">Started</div>
         <my-app>Loading...</my-app>
     </body>
 </html>
