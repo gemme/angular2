@@ -2,8 +2,13 @@ import {Component,Input} from 'angular2/core';
 @Component({
     selector: 'list-item',
     template: `
+    <style>
+        .completed{
+            text-decoration: line-through;
+        }
+    </style>
     <div>
-                <span [hidden]='list.status==="completed"'>{{list.title}}</span> 
+                <span [ngClass]='list.status'>{{list.title}} </span> 
                 <button (click)='list.toggle()'>Toggle</button>
     </div>`})   
 export class ListItemComponent {
